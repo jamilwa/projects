@@ -7,6 +7,13 @@ export const setIdeas = (ideas) => {
     };
 };
 
+export const getAllIdeas = (ideas) => {
+    return {
+        type: ActionTypes.GET_ALL_IDEAS,
+        payload: ideas,
+    }
+}
+
 export const selectedIdeas = (idea) => {
     return {
         type: ActionTypes.SELECTED_IDEAS,

@@ -1,10 +1,24 @@
 import { ActionTypes } from "../constants/action-types";
 import { call, put } from "redux-saga/effects";
-import { setIdeas } from "../actions/ideaActions";
-import { RequestAddIdeas, requestGetIdea, RequestIdeaDeleted, RequestSingleGetIdea, RequestUpdateIdea } from "./Services/idea";
-import { handleSetIdeas } from "./Services/idea";
+import { RequestAddIdeas, RequestGetAllIdea, requestGetIdea, RequestIdeaDeleted, RequestSingleGetIdea, RequestUpdateIdea } from "./Services/idea";
 
-//get
+//get all ideas in the repository irrespective of users
+export function* handleGetAllIdea() {
+    try {
+        const response = yield call(RequestGetAllIdea);
+        yield put({
+            type: ActionTypes.GET_ALL_IDEAS_SUCCESS,
+            payload: response
+
+        });
+    } catch (error){
+        console.log(error);
+    }
+
+}
+
+
+//get call for user only
 export function* handleGetIdea() {
     try {
         const response = yield call(requestGetIdea);
@@ -21,9 +35,9 @@ export function* handleGetIdea() {
 
 export function* handleSingleGetIdea(action) {
     try {
-        let param = action.payload;
-        console.log("paramTrue", param);
-        const response = yield call(RequestSingleGetIdea, param);
+        let params = action.payload;
+        console.log("paramTrue", params);
+        const response = yield call(RequestSingleGetIdea, params);
         console.log("respSingle", response);
         yield put({
             type: ActionTypes.SELECTED_IDEAS_SUCCESS,
@@ -56,13 +70,13 @@ export function* handleDeleteIdea(action) {
 
     try {
         
-        let pram = action.payload;
-        console.log("param", pram);
-        const response = yield call(RequestIdeaDeleted, pram);
+        let params = action.payload;
+        console.log("param", params);
+        const response = yield call(RequestIdeaDeleted, params);
         console.log("respDelete", response);
         yield put({
             type: ActionTypes.DELETE_IDEAS_SUCCESS,
-            payload: pram
+            payload: params
 
         });
     } catch (error){

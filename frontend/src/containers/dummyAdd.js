@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addIdeas } from "../redux/actions/ideaActions";
-import FinalFooter from "./Footer";
-import AddHeader from "./HeaderForAdd";
+import HeaderForAdd from "./HeaderForAdd";
 
 export const AddForm = () => {
 
@@ -32,13 +31,13 @@ export const AddForm = () => {
     return (
         <>
             <form>
-            <AddHeader />
+            <HeaderForAdd />
                 <div className="row justify-content-center">
                     <div className="col-3 center-content">
 
                         <div className="form-floating mb-3">
                         <label className="form-label">Title</label>
-                            <input id = "input-ideaTitle" type="text" className="form-control" name="ideaTitle" placeholder="enter your title"
+                            <input type="text" className="form-control" name="ideaTitle" placeholder="enter your title"
                                    value={ideaTitle}
                                    onChange={(e) => setIdeaTitle(e.target.value)}/>
                            
@@ -47,7 +46,7 @@ export const AddForm = () => {
                         <div className="form-floating mb-3">
                         <label className="form-label">Description</label>
                         <br />
-                            <textarea id = "input-ideaDesc" style={{width:"100%"}} type="text" className="form-control" name="ideaDescription" placeholder="Description"
+                            <textarea style={{width:"100%"}} type="text" className="form-control" name="ideaDescription" placeholder="Description"
                                    value={ideaDescription}
                                    onChange={(e) => setIdeaDescription(e.target.value)}
                             />
@@ -55,7 +54,7 @@ export const AddForm = () => {
                         </div>
                         <div className="form-floating mb-3">
                         <label className="form-label">Story points</label>
-                            <input id = "input-ideaSP" type="number" min="0" className="form-control" name="ideaStorypoints" placeholder="story points"
+                            <input type="number" min="0" className="form-control" name="ideaStorypoints" placeholder="story points"
                                    value={ideaStorypoints}
                                    onChange={(e) => setIdeaStorypoints(e.target.value)}
                             />
@@ -63,7 +62,6 @@ export const AddForm = () => {
                         </div>
                         <hr/>
                         <button 
-                        id="btn-submit"
                         disabled={!ideaTitle || !ideaDescription || !ideaStorypoints}
                         className="ui animated button" tableindex="0" onClick={() => submit()}>
                         <div className="visible content">Submit</div>
@@ -79,7 +77,6 @@ export const AddForm = () => {
 
                     </div>
                 </div>
-                <FinalFooter />
             </form>
         </>
     );

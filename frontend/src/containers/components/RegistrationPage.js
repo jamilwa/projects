@@ -70,7 +70,7 @@ export const RegistrationPage = () => {
         console.log('Success', resp);
       })
       .catch(function (error) {
-        setErrorMessage("Please enter valid details!", error);
+        setErrorMessage("User is already registered!", error);
     });
       
     }

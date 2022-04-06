@@ -15,15 +15,14 @@ const Header2 = () => {
     }
 
     return(
-        <div className="ui fixed menu" style={{backgroundColor: 'ivory'}}>
+        <div className="ui fixed menu" style={{backgroundColor: 'rgb(67, 67, 231)'}}>
         <div className="extra content">
-        <i className="user icon" style={{color: "green", marginTop: "15px"}}>&nbsp;&nbsp;{localStorage.getItem('email')}</i>
+        <i className="user icon" style={{color: "white", marginTop: "15px"}}>&nbsp;&nbsp;{localStorage.getItem('email')}</i>
         <div className="visible content" style={{ marginLeft: "2px"}}>
         
         </div>
         
         </div>
-
         
         <button className="ui animated button" tableindex="0" style={{width: "110%", marginLeft: "900px", marginTop: "7px", marginBottom:"7px", padding: "11px", textAlign:"center"}} onClick={()=>onAddClicked()}>
             <div className="visible content">Add</div>

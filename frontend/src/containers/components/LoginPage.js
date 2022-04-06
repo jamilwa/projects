@@ -13,12 +13,12 @@ export const LoginPage = () => {
     const history = useHistory();
 
     const regEx1 = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
-//     function checkLogin() {
-//         if(localStorage.getItem('email')){
-//             history.push('//allidearepo')
-//         }
-//     }
-// checkLogin();
+    function checkLogin() {
+        if(localStorage.getItem('email')){
+            history.push('/idealisting')
+        }
+    }
+checkLogin();
 
     const usernamelValidation = (e) => {
        
@@ -49,7 +49,7 @@ export const LoginPage = () => {
         history.push('/idealisting')
             })
     .catch(function (error) {
-        setErrorMessage("Please check your entries and try again!");
+        setErrorMessage("Please check your entries and try again!", error);
     });
       
     }

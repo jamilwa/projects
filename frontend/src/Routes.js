@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { LoginPage } from './components/LoginPage';
-import { RegistrationPage } from './components/RegistrationPage';
+import { LoginPage } from './containers/components/LoginPage';
+import { RegistrationPage } from './containers/components/RegistrationPage';
 import IdeaListing from './containers/ideaListing';
 import IdeaDetails from './containers/ideaDetails';
-import { UpdateIdea } from './containers/updateForm';
+import { UpdateIdea } from './containers/UpdateForm';
 import AllIdeaListing from './containers/AllIdeaListing';
 import AllIdeaDetails from './containers/AllIdeaDetails';
 import { AddForm } from './containers/AddForm';
@@ -24,7 +24,7 @@ export const Routes = () => {
             <Route path="/idea/:ideaId" exact>
             <IdeaDetails />
         </Route>
-        <Route path="/allidea/:ideaId3" exact>
+        <Route path="/repository/:id" exact>
             <AllIdeaDetails />
         </Route>
         <Route path="/add" exact>
@@ -33,7 +33,7 @@ export const Routes = () => {
     <Route path="/idea/update/:ideaId1" exact>
     <UpdateIdea />
     </Route>
-<Route path="/allidearepo" exact>
+<Route path="/repository" exact>
 <AllIdeaListing />
 </Route>
             </Switch>

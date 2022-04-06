@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import Header from "./Header";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateIdea } from "../redux/actions/ideaActions";
+import UpdateHeader from "./HeaderForUpdate";
 
 export const UpdateIdea = () => {
 
@@ -29,7 +29,7 @@ let obj = {
 
     const onButtonHandler = () => {
             dispatch(updateIdea(obj))
-            window.location = 'http://localhost:3000/idealisting';
+            // window.location = 'http://localhost:3000/idealisting';
             history.push('/idealisting')
     }
 
@@ -37,7 +37,7 @@ let obj = {
    
         <>
             <form>
-            <Header />
+            <UpdateHeader />
                 <div className="row justify-content-center">
                     <div className="col-3 center-content">
 

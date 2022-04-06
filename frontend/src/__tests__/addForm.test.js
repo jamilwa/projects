@@ -1,23 +1,17 @@
 import React from "react";
 import ShallowRenderer from 'react-test-renderer/shallow';
-import { configure ,shallow } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-import { LoginPage } from "../containers/components/LoginPage";
+import { AddForm } from "../containers/AddForm";
 
 configure({ adapter: new Adapter() });
 
-
-
-
-it("check for test cases",()=> {
+it("check for test cases", () => {
     const renderer = new ShallowRenderer();
-    renderer.render(<LoginPage />);
+    renderer.render(<AddForm />);
     expect(renderer).toMatchSnapshot();
 
 })
-
 
 const simulateOnChangeInput = (wrapper, inputSelector, newValue) => {
     const input = wrapper.find(inputSelector);
@@ -28,27 +22,27 @@ const simulateOnChangeInput = (wrapper, inputSelector, newValue) => {
     return wrapper.find(inputSelector);
   };
   test('useState mock ', () => {
-    const wrapper = shallow(<LoginPage />);
+    const wrapper = shallow(<AddForm />);
     const updatedNameInput = simulateOnChangeInput(
         wrapper,
-        "#input-password",
-        "Test@1728"
+        "#input-ideaTitle",
+        "new title"
       );
     
-    wrapper.find('#btn-primary').simulate('click');
+    wrapper.find('#btn-submit').simulate('click');
     expect(wrapper).toMatchSnapshot();
     // initial state is set and you can now test your component 
     })
     
-    test('useState mock for username ', () => {
-        const wrapper = shallow(<LoginPage />);
+    test('useState mock for ideaDesc ', () => {
+        const wrapper = shallow(<AddForm />);
         const updatedName1Input = simulateOnChangeInput(
             wrapper,
-            "#input-username",
-            "arthur@gmail.com"
+            "#input-ideaDesc",
+            "test description"
           );
         
-        wrapper.find('#btn-primary').simulate('click');
+        wrapper.find('#btn-submit').simulate('click');
         expect(wrapper).toMatchSnapshot();
         // initial state is set and you can now test your component 
         })
