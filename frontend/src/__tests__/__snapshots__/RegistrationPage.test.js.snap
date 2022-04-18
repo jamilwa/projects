@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check for test cases 1`] = `
+ReactShallowRenderer {
+  "_context": Object {},
+  "_didScheduleRenderPhaseUpdate": false,
+  "_dispatcher": Object {
+    "readContext": [Function],
+    "useCallback": [Function],
+    "useContext": [Function],
+    "useDebugValue": [Function],
+    "useDeferredValue": [Function],
+    "useEffect": [Function],
+    "useId": [Function],
+    "useImperativeHandle": [Function],
+    "useInsertionEffect": [Function],
+    "useLayoutEffect": [Function],
+    "useMemo": [Function],
+    "useReducer": [Function],
+    "useRef": [Function],
+    "useResponder": [Function],
+    "useState": [Function],
+    "useSyncExternalStore": [Function],
+    "useTransition": [Function],
+  },
+  "_element": <RegistrationPage />,
+  "_firstWorkInProgressHook": Object {
+    "memoizedState": "",
+    "next": Object {
+      "memoizedState": "",
+      "next": Object {
+        "memoizedState": "",
+        "next": Object {
+          "memoizedState": "",
+          "next": Object {
+            "memoizedState": false,
+            "next": Object {
+              "memoizedState": false,
+              "next": Object {
+                "memoizedState": false,
+                "next": Object {
+                  "memoizedState": "",
+                  "next": Object {
+                    "memoizedState": "",
+                    "next": Object {
+                      "memoizedState": "",
+                      "next": null,
+                      "queue": Object {
+                        "dispatch": [Function],
+                        "first": null,
+                      },
+                    },
+                    "queue": Object {
+                      "dispatch": [Function],
+                      "first": null,
+                    },
+                  },
+                  "queue": Object {
+                    "dispatch": [Function],
+                    "first": null,
+                  },
+                },
+                "queue": Object {
+                  "dispatch": [Function],
+                  "first": null,
+                },
+              },
+              "queue": Object {
+                "dispatch": [Function],
+                "first": null,
+              },
+            },
+            "queue": Object {
+              "dispatch": [Function],
+              "first": null,
+            },
+          },
+          "queue": Object {
+            "dispatch": [Function],
+            "first": null,
+          },
+        },
+        "queue": Object {
+          "dispatch": [Function],
+          "first": null,
+        },
+      },
+      "queue": Object {
+        "dispatch": [Function],
+        "first": null,
+      },
+    },
+    "queue": Object {
+      "dispatch": [Function],
+      "first": null,
+    },
+  },
+  "_forcedUpdate": false,
+  "_idCounter": 0,
+  "_instance": null,
+  "_isReRender": false,
+  "_newState": null,
+  "_numberOfReRenders": 0,
+  "_renderPhaseUpdates": null,
+  "_rendered": <div
+    className="content-container"
+  >
+    <h1
+      style={
+        Object {
+          "color": "green",
+          "fontSize": "23px",
+          "fontStyle": "-moz-initial",
+          "fontVariant": "all-petite-caps",
+          "textAlign": "center",
+        }
+      }
+    >
+      Create an account
+    </h1>
+    
+    <input
+      id="userName-input"
+      onChange={[Function]}
+      placeholder="enter your email"
+      value=""
+    />
+    <div
+      className="message error"
+    >
+      
+    </div>
+    <input
+      onChange={[Function]}
+      placeholder="enter your password"
+      type="password"
+      value=""
+    />
+    <div
+      className="message error"
+    >
+      
+    </div>
+    <input
+      onChange={[Function]}
+      placeholder="confirm your password"
+      type="password"
+      value=""
+    />
+    <div
+      className="message error"
+    >
+      
+    </div>
+    <hr />
+    <button
+      className="ui animated button"
+      disabled={true}
+      id="btn-register"
+      onClick={[Function]}
+      tableindex="0"
+    >
+      <div
+        className="visible content"
+      >
+        Register
+      </div>
+      <div
+        className="hidden content"
+      >
+        <i
+          className="chevron right icon"
+        />
+      </div>
+    </button>
+    <hr />
+    <button
+      className="ui animated button"
+      onClick={[Function]}
+      tableindex="0"
+    >
+      <div
+        className="visible content"
+      >
+        Already have an account? Log in here
+      </div>
+      <div
+        className="hidden content"
+      >
+        <i
+          className="chevron circle right icon"
+        />
+      </div>
+    </button>
+  </div>,
+  "_rendering": false,
+  "_updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": [Circular],
+  },
+  "_workInProgressHook": null,
+}
+`;
+
+exports[`check mount 1`] = `ShallowWrapper {}`;
