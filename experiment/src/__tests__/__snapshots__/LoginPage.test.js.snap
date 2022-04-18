@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check for test cases 1`] = `
+ReactShallowRenderer {
+  "_context": Object {},
+  "_didScheduleRenderPhaseUpdate": false,
+  "_dispatcher": Object {
+    "readContext": [Function],
+    "useCallback": [Function],
+    "useContext": [Function],
+    "useDebugValue": [Function],
+    "useDeferredValue": [Function],
+    "useEffect": [Function],
+    "useImperativeHandle": [Function],
+    "useLayoutEffect": [Function],
+    "useMemo": [Function],
+    "useReducer": [Function],
+    "useRef": [Function],
+    "useResponder": [Function],
+    "useState": [Function],
+    "useTransition": [Function],
+  },
+  "_element": <LoginPage />,
+  "_firstWorkInProgressHook": Object {
+    "memoizedState": "",
+    "next": Object {
+      "memoizedState": "",
+      "next": Object {
+        "memoizedState": "",
+        "next": Object {
+          "memoizedState": false,
+          "next": Object {
+            "memoizedState": "",
+            "next": null,
+            "queue": Object {
+              "dispatch": [Function],
+              "first": null,
+            },
+          },
+          "queue": Object {
+            "dispatch": [Function],
+            "first": null,
+          },
+        },
+        "queue": Object {
+          "dispatch": [Function],
+          "first": null,
+        },
+      },
+      "queue": Object {
+        "dispatch": [Function],
+        "first": null,
+      },
+    },
+    "queue": Object {
+      "dispatch": [Function],
+      "first": null,
+    },
+  },
+  "_forcedUpdate": false,
+  "_instance": null,
+  "_isReRender": false,
+  "_newState": null,
+  "_numberOfReRenders": 0,
+  "_renderPhaseUpdates": null,
+  "_rendered": <div
+    className="content-container"
+  >
+    <LoginHeader />
+    <h1
+      style={
+        Object {
+          "color": "green",
+          "fontSize": "22px",
+          "fontStyle": "-moz-initial",
+          "fontVariant": "all-petite-caps",
+          "textAlign": "center",
+        }
+      }
+    >
+      Log-in to your account
+    </h1>
+    
+    <input
+      className="user icon"
+      id="input-username"
+      onChange={[Function]}
+      placeholder="username"
+      value=""
+    />
+    <div
+      className="message error"
+    >
+      
+    </div>
+    <input
+      id="input-password"
+      onChange={[Function]}
+      placeholder="password"
+      type="password"
+      value=""
+    />
+    <button
+      className="ui animated button"
+      disabled={true}
+      id="btn-primary"
+      onClick={[Function]}
+      tableindex="0"
+    >
+      <div
+        className="visible content"
+      >
+        Log In
+      </div>
+      <div
+        className="hidden content"
+      >
+        <i
+          className="sign in alternate icon"
+        />
+      </div>
+    </button>
+    <hr />
+    <h4
+      className="mt-2"
+    >
+          Don't have an account? 
+      <Link
+        to="/registration"
+      >
+         Register Here
+      </Link>
+    </h4>
+    <FinalFooter />
+  </div>,
+  "_rendering": false,
+  "_updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": [Circular],
+  },
+  "_workInProgressHook": null,
+}
+`;
+
+exports[`useState mock  1`] = `ShallowWrapper {}`;
+
+exports[`useState mock for username  1`] = `ShallowWrapper {}`;
